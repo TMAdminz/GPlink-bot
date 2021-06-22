@@ -18,7 +18,7 @@ bot = Client('gplink bot',
 @bot.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
     await message.reply(
-        f"**Hi {message.chat.first_name}!**\n\n"
+        f"**Hi {message.chat.first_name} {message.from_user.last_name}!**\n\n"
         "I'm GPlink bot. Just send me link and get short link")
 
 
